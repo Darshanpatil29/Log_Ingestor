@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>Query Interface</title>
+</head>
+<body>
+  <div class="container">
+    <h1>Query Interface</h1>
+    <form id="searchForm">
+      <label for="searchText">Search:</label>
+      <input type="text" id="searchText" name="searchText" placeholder="Enter search text">
+
+      <label for="filterType">Filter By:</label>
+      <select id="filterType" name="filterType">
+        <option value="level">Level</option>
+        <option value="message">Message</option>
+        <option value="resourceId">ResourceID</option>
+        <option value="timestamp">Timestamp</option>
+        <option value="traceId">TraceID</option>
+        <option value="spanId">SpanID</option>
+        <option value="commit">Commit</option>
+        <option value="metadata.parentResourceId">Metadata.parentResourceId</option>
+      </select>
+
+      <button type="button" onclick="performSearch()">Search</button>
+    </form>
+    
+    <div id="searchResults"></div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
